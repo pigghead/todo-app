@@ -1,3 +1,6 @@
+$small: 670px;
+$medium: 800px;
+
 .task {
     background-color: var(--card);
     margin-bottom: 15px;
@@ -12,16 +15,36 @@
 
         h2 {
             font-size: 28px;
+            @media screen and (max-width: $small) {
+                font-size: 12px;
+            }
+            @media screen and (max-width: $medium) {
+                font-size: 10px;
+            }
         }
         
         .edits {
+            display:flex;
+
             button {
-                margin-left: 30px;
+                margin-left: 15px;
                 border: none;
                 border-radius: 3px;
                 padding: 9px 15px;
                 font-weight:700;
                 cursor: pointer;
+                @media screen and (max-width: $small) {
+                    margin-left: 10px;
+                    padding: 1px 3px;
+                    font-size: 8px;
+                    font-weight: 400;
+                }
+                @media screen and (max-width: $medium) {
+                    margin-left: 10px;
+                    padding: 1px 3px;
+                    font-size: 8px;
+                    font-weight: 400;
+                }
 
                 &.editButton {
                     background-color: var(--hover-color);
@@ -31,6 +54,14 @@
                 &.deleteButton {
                     background-color: red;
                     color: var(--primary-text);
+                }
+
+                &.complete {
+                    background-color: green;
+                }
+
+                &.incomplete {
+                    background-color: red;
                 }
             }
         }
@@ -44,6 +75,9 @@
             color: var(--secondary-text);
             font-size: 16px;
             font-weight: 700;
+            @media screen and (max-width: $small) {
+                font-size: 12px;
+            }
         }
     }
 

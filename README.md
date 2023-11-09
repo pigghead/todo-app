@@ -2,11 +2,11 @@
 Utilizes MongoDb as a database, Express & Node as the web server, and React for the front-end.
 
 # How to use
+(Note: "npm install" command may be needed in both terminal instances before running other commands to ensure node_modules files are up to date and in sync)
+
 Launch a terminal instance. Navigate to the "backend" folder inside of the terminal and execute the "node server.js" command to launch the web server.
 
 Launch a second terminal instance. Navigate to the "frontend" folder inside of the terminal and execute the "npm run start" command to launch the frontend.
-
-(Note: "npm install" command may be needed in both instances before running other commands to ensure package and package-lock are up to date and in sync)
 
 Inside of a web browser, navigate to "localhost:3000" to begin using the application.
 

@@ -8,7 +8,6 @@ import { URL } from "../../App";
 export const List = () => {
 
     const [tasks, setTasks] = useState([]);
-    const [completedTasks, setCompletedTasks] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
     const [taskId, setTaskId] = useState("");
@@ -72,7 +71,7 @@ export const List = () => {
         try {
             await axios.put(`${URL}/tasks/${taskId}`, taskData);
             // Reset form to blank after submitting an update
-            setTaskData({title:"", desc:""});
+            setTaskData({completed:false, title:"", desc:""});
             setIsEditing(false);
             getTasks();
         } catch (err) {
@@ -83,6 +82,20 @@ export const List = () => {
     const deleteTask = async (task) => {
         try {
             await axios.delete(`${URL}/tasks/${task._id}`);
+            getTasks();
+        } catch (err) {
+            alert(err.message);
+        }
+    }
+
+    const setToComplete = async (task) => {
+        const newTaskData = {
+            completed:!task.completed,
+            title:task.title,
+            desc:task.desc,
+        }
+        try{
+            await axios.put(`${URL}/tasks/${task._id}`, newTaskData);
             getTasks();
         } catch (err) {
             alert(err.message);
@@ -114,7 +127,8 @@ export const List = () => {
                                 index={index}
                                 task={task}
                                 deleteTask={() => deleteTask(task)} 
-                                getSingleTask={getSingleTask} />
+                                getSingleTask={getSingleTask} 
+                                setToComplete={setToComplete} />
                         )
                     })}
                     </>
