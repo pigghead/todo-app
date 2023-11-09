@@ -1,0 +1,59 @@
+.task {
+    background-color: var(--card);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+
+    .title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 15px;
+
+        h2 {
+            font-size: 28px;
+        }
+        
+        .edits {
+            button {
+                margin-left: 30px;
+                border: none;
+                border-radius: 3px;
+                padding: 9px 15px;
+                font-weight:700;
+                cursor: pointer;
+
+                &.editButton {
+                    background-color: var(--hover-color);
+                    color: var(--primary-text);
+                }
+
+                &.deleteButton {
+                    background-color: red;
+                    color: var(--primary-text);
+                }
+            }
+        }
+    }
+
+    .desc {
+        margin: 0 15px;
+        margin-bottom: 30px;
+
+        p {
+            color: var(--secondary-text);
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+
+    .save {
+        margin: 0 15px;
+        text-align: right;
+        padding-bottom: 15px;
+
+        button {
+            margin-left: 30px;
+        }
+    }
+}

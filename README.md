@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# MERN Stack To Do list application
+Utilizes MongoDb as a database, Express & Node as the web server, and React for the front-end.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# How to use
+Launch a terminal instance. Navigate to the "backend" folder inside of the terminal and execute the "node server.js" command to launch the web server.
 
-## Available Scripts
+Launch a second terminal instance. Navigate to the "frontend" folder inside of the terminal and execute the "npm run start" command to launch the frontend.
 
-In the project directory, you can run:
+(Note: "npm install" command may be needed in both instances before running other commands to ensure package and package-lock are up to date and in sync)
 
-### `npm start`
+Inside of a web browser, navigate to "localhost:3000" to begin using the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Additional Information
+- Axios was used for convenient communication between the front end and the back end
+- Sass was used in the frontend for CSS
+- nodemon was used in development to prevent needless restarts of the backend after a modification
+- Backend structure follows a basic separation of concerns, including a controller and router file for building the routes within the application
+- There is no login for individualized to do lists as there was no specification for one, however could be an easy addition due to the backend architecture (controller, routes, etc)
+- Form validation implented in the form of alerts (there are node packages to make this pretty)
+- A __test__ folder inside of components in the frontend is present for component testing, used to ensure frontend .env folder works properly
+- Separate node_modules, package.json, etc, files for separation of concerns

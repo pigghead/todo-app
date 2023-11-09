@@ -1,0 +1,41 @@
+.addTask {
+    margin-bottom: 25px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            border-radius: 5px;
+            padding: 10px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        textarea {
+            border-radius: 5px;
+            padding: 10px;
+            resize: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        button {
+            background-color: var(--hover-color);
+            color: var(--primary-text);
+            font-weight: 700;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    }
+
+    form > * {
+        margin-bottom: 10px;
+    }
+}
