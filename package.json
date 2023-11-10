@@ -4,8 +4,10 @@
   "description": "Utilizes MongoDb as a database, Express & Node as the web server, and React for the front-end.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"cd ./backend && npm run start\" \"cd ./frontend && npm run start\""
+    "start": "node ./backend/server.js",
+    "install-client": "cd frontend && npm install",
+    "build-client":"cd frontend && npm run build",
+    "deploy":"npm run install-client && npm run build-client && npm start"
   },
   "author": "",
   "license": "ISC",
