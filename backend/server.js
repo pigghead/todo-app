@@ -16,8 +16,9 @@ app.use(taskRoutes);
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname, path.join(__dirname, '..', '.env'))
-    console.log(__dirname, path.join(__dirname, '..', '/frontend/index.js'));
+    //res.sendFile(__dirname, path.join(__dirname, '..', '.env'))
+    //console.log(__dirname, path.join(__dirname, '..', '/frontend/index.js'));
+    res.send('Hello world');
 });
 
 const PORT = process.env.PORT || 5001
