@@ -1,5 +1,5 @@
 import './home.scss';
-import { List } from '../../components/List/List';
+import { List } from '../../components/list/List';
 
 
 export const Home = () => {
