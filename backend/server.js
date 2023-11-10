@@ -15,7 +15,7 @@ app.use(cors());
 app.use(taskRoutes);
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
-app.get("/*", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(__dirname, path.join(__dirname, '..', '.env'))
     console.log(__dirname, path.join(__dirname, '..', '/frontend/index.js'));
 });
