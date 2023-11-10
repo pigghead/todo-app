@@ -15,8 +15,9 @@ app.use(cors());
 app.use(taskRoutes);
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
-app.listen('8000', () => {
-    console.log('listening on port 8000');
+const PORT = process.env.PORT || 5001
+app.listen(PORT, () => {
+    console.log('listening on port ' + PORT);
 });
 
 // BmuDrDncjwmtwpkz
