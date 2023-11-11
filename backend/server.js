@@ -15,7 +15,7 @@ app.use(taskRoutes);
 app.use(express.static(path.join(__dirname, "..", "frontend", "build")));
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
-app.get("/", (req, res) => {
+app.get("/*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "..", "frontend", "public", "index.html"));
     console.log(path.resolve(__dirname, "frontend", "public", "index.html"));
     //console.log(__dirname, path.join(__dirname, '..', '/frontend/index.js'));
