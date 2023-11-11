@@ -120,7 +120,7 @@ export const List = () => {
                     <p>Add a task to get started</p>
                 ) : (
                     <>
-                    {tasks.map((task, index) => {
+                    {tasks && tasks.length && tasks.map((task, index) => {
                         return (
                             <Task 
                                 key={task._id}
