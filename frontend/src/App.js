@@ -9,5 +9,5 @@ function App() {
   );
 }
 
-export const URL = process.env.REACT_APP_URL || 'http://localhost:8000';
+export const URL = process.env.REACT_APP_URL || 'http://localhost:4040';
 export default App;
