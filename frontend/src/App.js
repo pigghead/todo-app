@@ -9,5 +9,5 @@ function App() {
   );
 }
 
-export const URL = process.env.REACT_APP_LOCAL_URL || 'http://localhost:5001';
+export const URL = process.env.REACT_APP_LOCAL_URL || 'http://localhost:5001/tasks';
 export default App;
