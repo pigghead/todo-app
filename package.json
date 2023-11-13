@@ -1,9 +1,6 @@
 {
   "name": "todo-app",
   "version": "1.0.0",
-  "engines": {
-    "node":">=v18.17.x"
-  },
   "description": "Utilizes MongoDb as a database, Express & Node as the web server, and React for the front-end.",
   "main": "index.js",
   "scripts": {
