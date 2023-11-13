@@ -1,5 +1,9 @@
 import './home.scss';
-import { List } from '../../components/list/List';
+//import { List } from '../../components/list/List';
+import { useEffect, useState } from "react";
+import { AddTask } from "../addTask/AddTask"
+import { Task } from "../task/Task";
+import { URL } from "../../App";
 
 
 export const Home = () => {
