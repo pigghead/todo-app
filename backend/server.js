@@ -14,7 +14,7 @@ app.use(cors());
 //app.use(express.static('/', express.static(path.join(__dirname, '../frontend/build'))));
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 app.use(taskRoutes);
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "..", "frontend", "public", "index.html"));
     console.log(path.resolve(__dirname, "..", "frontend", "public", "index.html"));
 });

@@ -28,7 +28,7 @@ export const List = () => {
         try {
             const newTask = {completed:false, title, desc};
             setTasks({...tasks, newTask});
-            await axios.post(`${URL}/tasks`, taskData);
+            await axios.post(`${URL}/api/tasks`, taskData);
             // Reset form data to blank
             setTaskData({title: "", desc: ""});
             getTasks();
@@ -48,7 +48,7 @@ export const List = () => {
     const getTasks = async () => {
         setIsLoading(true);
         try {
-            const {data} = await axios.get(`${URL}/tasks`);
+            const {data} = await axios.get(`${URL}/api/tasks`);
             setTasks(data);
             setIsLoading(false);
         } catch (err) {
@@ -69,7 +69,7 @@ export const List = () => {
             return alert("Task Title cannot be empty");
         }
         try {
-            await axios.put(`${URL}/tasks/${taskId}`, taskData);
+            await axios.put(`${URL}/api/tasks/${taskId}`, taskData);
             // Reset form to blank after submitting an update
             setTaskData({completed:false, title:"", desc:""});
             setIsEditing(false);
@@ -81,7 +81,7 @@ export const List = () => {
 
     const deleteTask = async (task) => {
         try {
-            await axios.delete(`${URL}/tasks/${task._id}`);
+            await axios.delete(`${URL}/api/tasks/${task._id}`);
             getTasks();
         } catch (err) {
             alert(err.message);
@@ -95,7 +95,7 @@ export const List = () => {
             desc:task.desc,
         }
         try{
-            await axios.put(`${URL}/tasks/${task._id}`, newTaskData);
+            await axios.put(`${URL}/api/tasks/${task._id}`, newTaskData);
             getTasks();
         } catch (err) {
             alert(err.message);
