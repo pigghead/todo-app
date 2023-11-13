@@ -1,9 +1,9 @@
 import axios from "axios";
 import './list.scss';
 import { useEffect, useState } from "react";
-import { AddTask } from "../addTask/AddTask"
-import { Task } from "../task/Task";
-import { URL } from "../../App";
+import { AddTask } from '../addTask/AddTask';
+import { Task } from '../task/Task';
+import { URL } from '../../App';
 
 export const List = () => {
 
