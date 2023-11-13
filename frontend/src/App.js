@@ -1,6 +1,7 @@
 import './App.scss';
 //import { Home } from './pages/home/Home';
-import { List } from './components/list/List';
+//import { List } from './components/list/List';
+import { Task } from './components/task/Task';
 
 function App() {
   return (
