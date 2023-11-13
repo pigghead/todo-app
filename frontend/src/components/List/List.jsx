@@ -27,8 +27,8 @@ export const List = () => {
 
         try {
             const newTask = {completed:false, title, desc};
+            setTasks({...tasks, newTask});
             await axios.post(`${URL}/tasks`, taskData);
-            setTasks(prevTasks => [...prevTasks, newTask]);
             // Reset form data to blank
             setTaskData({title: "", desc: ""});
             getTasks();
@@ -50,7 +50,6 @@ export const List = () => {
         try {
             const {data} = await axios.get(`${URL}/tasks`);
             setTasks(data);
-            console.log(tasks.length);
             setIsLoading(false);
         } catch (err) {
             alert(err.message);
@@ -121,7 +120,7 @@ export const List = () => {
                     <p>Add a task to get started</p>
                 ) : (
                     <>
-                    {tasks && tasks.length > 0 && tasks.map((task, index) => {
+                    {tasks && tasks.length > 0 && tasks?.map((task, index) => {
                         return (
                             <Task 
                                 key={task._id}

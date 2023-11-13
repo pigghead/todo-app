@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cors());
-app.get("/*", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "..", "frontend", "public", "index.html"));
     console.log(path.resolve(__dirname, "frontend", "public", "index.html"));
 });
