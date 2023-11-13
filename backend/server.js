@@ -11,16 +11,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cors());
-app.use(taskRoutes);
-app.use(express.static(path.join(__dirname, "..", "frontend", "build")));
-mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
-
 app.get("/*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "..", "frontend", "public", "index.html"));
     console.log(path.resolve(__dirname, "frontend", "public", "index.html"));
-    //console.log(__dirname, path.join(__dirname, '..', '/frontend/index.js'));
-    //res.send('Hello world');
 });
+app.use(taskRoutes);
+app.use(express.static(path.join(__dirname, "..", "frontend", "build")));
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const PORT = process.env.PORT || 5001
 app.listen(PORT, () => {

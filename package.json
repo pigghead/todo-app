@@ -1,13 +1,15 @@
 {
   "name": "todo-app",
   "version": "1.0.0",
+  "engines": {
+    "node":">=v18.17.x"
+  },
   "description": "Utilizes MongoDb as a database, Express & Node as the web server, and React for the front-end.",
   "main": "index.js",
   "scripts": {
     "start": "node ./backend/server.js",
     "build":"cd frontend && npm run build",
     "install-client": "cd frontend && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
     "deploy":"npm run install-client && npm run build-client && npm start"
   },
   "author": "",
