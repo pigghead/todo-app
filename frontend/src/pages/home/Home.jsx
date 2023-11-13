@@ -1,5 +1,5 @@
 import './home.scss';
-//import { List } from '../../components/list/List';
+import { List } from '../../components/list/List';
 
 export const Home = () => {
 
@@ -7,7 +7,7 @@ export const Home = () => {
         <div className="home">
             <h2>To Do</h2>
             <div className="container">
-                <div>Hello world</div>
+                <List />
             </div>
         </div>
     )
