@@ -1,15 +1,16 @@
 import './App.scss';
-//import { Home } from './pages/home/Home';
+import { Home } from './pages/home/Home';
 //import { List } from './components/list/List';
 import { Task } from './components/task/Task';
 
 function App() {
   return (
     <div className='App'>
-      <h2>To Do</h2>
+      {/* <h2>To Do</h2>
         <div className="container">
           <div>Hello world</div>
-        </div>
+        </div> */}
+        <Home />
     </div>
   );
 }
