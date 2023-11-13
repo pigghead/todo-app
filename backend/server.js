@@ -17,7 +17,6 @@ app.get("/*", (req, res) => {
     console.log(path.resolve(__dirname, "..", "frontend", "public", "index.html"));
 });
 app.use(taskRoutes);
-app.use(express.static(path.join(__dirname, "..", "frontend", "build")));
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const PORT = process.env.PORT || 5001
