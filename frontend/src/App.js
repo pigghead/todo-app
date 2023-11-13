@@ -1,10 +1,14 @@
 import './App.scss';
-import { Home } from './pages/home/Home';
+//import { Home } from './pages/home/Home';
+import { List } from './components/list/List';
 
 function App() {
   return (
     <div className='App'>
-      <Home />
+      <h2>To Do</h2>
+        <div className="container">
+          <div>Hello world</div>
+        </div>
     </div>
   );
 }
