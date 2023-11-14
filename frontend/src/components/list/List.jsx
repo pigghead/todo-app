@@ -48,7 +48,7 @@ export const List = () => {
     const getTasks = async () => {
         setIsLoading(true);
         try {
-            const {data} = await axios.get(`${URL}api/tasks`);
+            const {data} = await axios.get(`${URL}/api/tasks`);
             setTasks(data);
             setIsLoading(false);
         } catch (err) {
