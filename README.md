@@ -1,5 +1,5 @@
 # MERN Stack To Do list application
-Utilizes MongoDb as a database, Express & Node as the web server, and React for the front-end.
+Utilizes MongoDb as a database, Express & Node as the web server, and React for the front-end. Heroku deployment can be found here: https://mighty-sands-37426-dc62ccbd4139.herokuapp.com/
 
 # How to use
 (Note: "npm install" command may be needed in both terminal instances before running other commands to ensure node_modules files are up to date and in sync)
